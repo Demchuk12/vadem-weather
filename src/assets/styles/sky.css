@@ -1,0 +1,103 @@
+@property --sky-from {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #4f9dff;
+}
+
+@property --sky-to {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #8ccaff;
+}
+
+@property --sky-glow {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: transparent;
+}
+
+.sky {
+  transition:
+    --sky-from 800ms var(--ease),
+    --sky-to 800ms var(--ease),
+    --sky-glow 800ms var(--ease);
+  --sky-from: #4f9dff;
+  --sky-to: #8ccaff;
+  --sky-glow: rgba(255, 220, 140, 0.55);
+  background:
+    radial-gradient(120% 90% at 85% 0%, var(--sky-glow), transparent 55%),
+    linear-gradient(160deg, var(--sky-from), var(--sky-to));
+  color: #fff;
+}
+
+.sky--day.sky--clear {
+  --sky-from: #3d8bff;
+  --sky-to: #7fc6ff;
+  --sky-glow: rgba(255, 214, 120, 0.7);
+}
+.sky--day.sky--partly {
+  --sky-from: #4f86ea;
+  --sky-to: #9cc3f2;
+  --sky-glow: rgba(255, 220, 150, 0.45);
+}
+.sky--day.sky--clouds {
+  --sky-from: #607a9f;
+  --sky-to: #9fb0c8;
+  --sky-glow: rgba(255, 255, 255, 0.25);
+}
+.sky--day.sky--rain {
+  --sky-from: #3f5682;
+  --sky-to: #7389ad;
+  --sky-glow: rgba(180, 210, 255, 0.25);
+}
+.sky--day.sky--storm {
+  --sky-from: #2a2f52;
+  --sky-to: #57608c;
+  --sky-glow: rgba(200, 180, 255, 0.3);
+}
+.sky--day.sky--snow {
+  --sky-from: #6f98c8;
+  --sky-to: #b3cbe6;
+  --sky-glow: rgba(255, 255, 255, 0.5);
+}
+.sky--day.sky--mist {
+  --sky-from: #7d8a9e;
+  --sky-to: #b6c0cd;
+  --sky-glow: rgba(255, 255, 255, 0.35);
+}
+
+.sky--night.sky--clear {
+  --sky-from: #0d1636;
+  --sky-to: #2c3d80;
+  --sky-glow: rgba(160, 170, 255, 0.35);
+}
+.sky--night.sky--partly {
+  --sky-from: #131d43;
+  --sky-to: #37477c;
+  --sky-glow: rgba(150, 160, 230, 0.28);
+}
+.sky--night.sky--clouds {
+  --sky-from: #1a2235;
+  --sky-to: #3a465f;
+  --sky-glow: rgba(140, 150, 190, 0.2);
+}
+.sky--night.sky--rain {
+  --sky-from: #111a2d;
+  --sky-to: #2d3a57;
+  --sky-glow: rgba(110, 140, 200, 0.22);
+}
+.sky--night.sky--storm {
+  --sky-from: #0c0e1d;
+  --sky-to: #2b2450;
+  --sky-glow: rgba(170, 130, 255, 0.28);
+}
+.sky--night.sky--snow {
+  --sky-from: #1c2847;
+  --sky-to: #485c86;
+  --sky-glow: rgba(210, 225, 255, 0.3);
+}
+.sky--night.sky--mist {
+  --sky-from: #1c212d;
+  --sky-to: #424a5b;
+  --sky-glow: rgba(180, 190, 210, 0.2);
+}
