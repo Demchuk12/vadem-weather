@@ -2,7 +2,7 @@
 
 Погодний застосунок на Vue 3 (Composition API) + TypeScript + Pinia з даними [OpenWeatherMap](https://openweathermap.org/).
 
-**Demo:** _посилання_
+**Demo:** https://vadem-weather.vercel.app
 
 ## Стек
 
